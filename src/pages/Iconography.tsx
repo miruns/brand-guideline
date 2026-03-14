@@ -1,25 +1,25 @@
 function Icon({ children, label }: { children: React.ReactNode; label: string }) {
   return (
-    <div className="flex flex-col items-center gap-3 rounded-xl border border-gray-200 bg-white p-6 text-center">
-      <div className="flex h-12 w-12 items-center justify-center text-gray-700">
+    <div className="flex flex-col items-center gap-3 rounded-lg border border-[#222] bg-[#111] p-6 text-center transition-colors hover:border-[#333]">
+      <div className="flex h-12 w-12 items-center justify-center text-[#ededed]">
         {children}
       </div>
-      <span className="text-xs text-gray-500">{label}</span>
+      <span className="text-xs text-[#666]">{label}</span>
     </div>
   )
 }
 
 export default function Iconography() {
   return (
-    <section id="iconography" className="brand-page min-h-screen px-8 py-24">
+    <section id="iconography" className="brand-page min-h-screen bg-black px-8 py-24">
       <div className="mx-auto max-w-5xl">
-        <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-gray-400">
+        <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-[#666]">
           05 — Iconography
         </p>
-        <h2 className="mb-4 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="mb-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           Icons &amp; Visual Elements
         </h2>
-        <p className="mb-14 max-w-lg text-sm leading-relaxed text-gray-500">
+        <p className="mb-14 max-w-lg text-sm leading-relaxed text-[#888]">
           Icons follow the Lucide style — 24×24 grid, 2px stroke, round caps
           and joins. Minimal, functional, recognizable at small sizes.
         </p>
@@ -107,24 +107,24 @@ export default function Iconography() {
 
         {/* Style rules */}
         <div className="grid gap-6 sm:grid-cols-3">
-          <div className="rounded-2xl border border-gray-200 bg-white p-6">
-            <h3 className="mb-2 text-sm font-semibold text-gray-900">Grid</h3>
-            <p className="text-sm leading-relaxed text-gray-500">
+          <div className="rounded-xl border border-[#222] bg-[#111] p-6">
+            <h3 className="mb-2 text-sm font-medium text-white">Grid</h3>
+            <p className="text-sm leading-relaxed text-[#888]">
               24×24px grid. 2px padding from edge. Optical alignment is
               preferred over mathematical centering.
             </p>
           </div>
-          <div className="rounded-2xl border border-gray-200 bg-white p-6">
-            <h3 className="mb-2 text-sm font-semibold text-gray-900">Stroke</h3>
-            <p className="text-sm leading-relaxed text-gray-500">
+          <div className="rounded-xl border border-[#222] bg-[#111] p-6">
+            <h3 className="mb-2 text-sm font-medium text-white">Stroke</h3>
+            <p className="text-sm leading-relaxed text-[#888]">
               2px stroke width. Round line caps and round line joins. Consistent
               across all icons.
             </p>
           </div>
-          <div className="rounded-2xl border border-gray-200 bg-white p-6">
-            <h3 className="mb-2 text-sm font-semibold text-gray-900">Color</h3>
-            <p className="text-sm leading-relaxed text-gray-500">
-              Icons inherit <code className="font-mono text-xs">currentColor</code>.
+          <div className="rounded-xl border border-[#222] bg-[#111] p-6">
+            <h3 className="mb-2 text-sm font-medium text-white">Color</h3>
+            <p className="text-sm leading-relaxed text-[#888]">
+              Icons inherit <code className="font-mono text-xs text-[#ededed]">currentColor</code>.
               Use foreground for primary, muted for secondary, accent for
               interactive states.
             </p>

@@ -33,3 +33,11 @@ npm run dev
 - TypeScript
 - Tailwind CSS 3
 - Vite 6
+
+## Deployment
+
+The site is automatically deployed to GitHub Pages via a GitHub Actions workflow on every push to `main`.
+
+**Live URL:** https://miruns.github.io/brand-guideline/
+
+To enable deployment, go to the repository **Settings → Pages** and set the **Source** to **GitHub Actions**.

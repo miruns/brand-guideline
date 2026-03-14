@@ -5,7 +5,7 @@ export default function Cover() {
       className="brand-page flex min-h-screen flex-col items-center justify-center bg-black px-8 text-center"
     >
       <img
-        src="/miruns-icon-512.png"
+        src={`${import.meta.env.BASE_URL}miruns-icon-512.png`}
         alt="Miruns logo"
         className="mb-12 h-20 w-20 rounded-2xl"
       />

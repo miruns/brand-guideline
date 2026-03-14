@@ -25,14 +25,14 @@ export default function LogoUsage() {
         <div className="grid gap-6 sm:grid-cols-2">
           {/* Dark on light */}
           <div className="flex flex-col items-center justify-center rounded-xl border border-[#e5e5e5] bg-white p-12">
-            <img src="/miruns-icon.png" alt="Miruns icon" className="mb-6 h-16 w-16 rounded-xl" />
+            <img src={`${import.meta.env.BASE_URL}miruns-icon.png`} alt="Miruns icon" className="mb-6 h-16 w-16 rounded-xl" />
             <span className="font-sans text-2xl font-light tracking-tight text-[#0a0a0a]">miruns</span>
             <p className="mt-4 text-xs text-[#999]">Primary — light background</p>
           </div>
 
           {/* Light on dark */}
           <div className="flex flex-col items-center justify-center rounded-xl border border-[#222] bg-[#0a0a0a] p-12">
-            <img src="/miruns-icon-512.png" alt="Miruns icon" className="mb-6 h-16 w-16 rounded-xl" />
+            <img src={`${import.meta.env.BASE_URL}miruns-icon-512.png`} alt="Miruns icon" className="mb-6 h-16 w-16 rounded-xl" />
             <span className="font-sans text-2xl font-light tracking-tight text-[#ededed]">miruns</span>
             <p className="mt-4 text-xs text-[#666]">Primary — dark background</p>
           </div>

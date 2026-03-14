@@ -14,10 +14,10 @@ const sections = [
 
 export default function Nav({ onExport }: NavProps) {
   return (
-    <nav className="no-print fixed top-0 left-0 z-50 w-full bg-white/80 backdrop-blur border-b border-gray-200">
+    <nav className="no-print fixed top-0 left-0 z-50 w-full bg-[#0a0a0a] border-b border-[#1a1a1a] backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-        <a href="#cover" className="font-mono text-sm tracking-tight text-gray-900">
-          miruns<span className="text-gray-400"> / brand</span>
+        <a href="#cover" className="font-sans text-sm font-medium tracking-tight text-white">
+          miruns<span className="text-[#666]"> / brand</span>
         </a>
 
         <div className="hidden md:flex items-center gap-6">
@@ -25,7 +25,7 @@ export default function Nav({ onExport }: NavProps) {
             <a
               key={s.id}
               href={`#${s.id}`}
-              className="text-xs text-gray-500 hover:text-gray-900 transition-colors"
+              className="text-xs text-[#888] hover:text-white transition-colors"
             >
               {s.label}
             </a>
@@ -34,7 +34,7 @@ export default function Nav({ onExport }: NavProps) {
 
         <button
           onClick={onExport}
-          className="inline-flex items-center gap-2 rounded-full bg-gray-900 px-4 py-1.5 text-xs font-medium text-white hover:bg-gray-700 transition-colors"
+          className="inline-flex items-center gap-2 rounded-full border border-[#333] bg-transparent px-4 py-1.5 text-xs font-medium text-white hover:bg-[#111] transition-colors"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />

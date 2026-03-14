@@ -37,20 +37,20 @@ function SwatchCard({ swatch }: { swatch: Swatch }) {
   return (
     <button
       onClick={copy}
-      className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 text-left transition-shadow hover:shadow-md"
+      className="group flex flex-col overflow-hidden rounded-lg border border-[#222] text-left transition-all hover:border-[#444]"
     >
       <div
         className={`flex h-28 items-end p-4 ${swatch.text}`}
         style={{ backgroundColor: swatch.hex }}
       >
-        <span className="text-xs font-medium opacity-80 group-hover:opacity-100">
+        <span className="text-xs font-medium opacity-60 group-hover:opacity-100 transition-opacity">
           {copied ? 'Copied!' : 'Click to copy'}
         </span>
       </div>
-      <div className="p-4">
-        <p className="text-sm font-semibold text-gray-900">{swatch.name}</p>
-        <p className="mt-1 font-mono text-xs text-gray-500">{swatch.hex}</p>
-        <p className="font-mono text-xs text-gray-400">{swatch.css}</p>
+      <div className="bg-[#0a0a0a] p-4">
+        <p className="text-sm font-medium text-[#ededed]">{swatch.name}</p>
+        <p className="mt-1 font-mono text-xs text-[#888]">{swatch.hex}</p>
+        <p className="font-mono text-xs text-[#555]">{swatch.css}</p>
       </div>
     </button>
   )
@@ -58,23 +58,23 @@ function SwatchCard({ swatch }: { swatch: Swatch }) {
 
 export default function ColorPalette() {
   return (
-    <section id="colors" className="brand-page min-h-screen px-8 py-24 bg-gray-50">
+    <section id="colors" className="brand-page min-h-screen px-8 py-24 bg-[#0a0a0a]">
       <div className="mx-auto max-w-5xl">
-        <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-gray-400">
+        <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-[#666]">
           02 — Colors
         </p>
-        <h2 className="mb-4 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="mb-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           Color Palette
         </h2>
-        <p className="mb-14 max-w-lg text-sm leading-relaxed text-gray-500">
+        <p className="mb-14 max-w-lg text-sm leading-relaxed text-[#888]">
           Miruns uses a dual-theme system. The dark theme is primary — it
           reflects the product&#39;s focus on deep focus and neural signals. The
           light theme serves documentation and daylight contexts.
         </p>
 
         {/* Dark theme */}
-        <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-gray-400">
-          Dark Theme <span className="text-gray-300">— Primary</span>
+        <h3 className="mb-4 text-xs font-medium uppercase tracking-widest text-[#666]">
+          Dark Theme <span className="text-[#444]">— Primary</span>
         </h3>
         <div className="mb-14 grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
           {darkPalette.map((s) => (
@@ -83,7 +83,7 @@ export default function ColorPalette() {
         </div>
 
         {/* Light theme */}
-        <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-gray-400">
+        <h3 className="mb-4 text-xs font-medium uppercase tracking-widest text-[#666]">
           Light Theme
         </h3>
         <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
@@ -93,15 +93,15 @@ export default function ColorPalette() {
         </div>
 
         {/* Accent usage */}
-        <div className="mt-16 rounded-2xl border border-gray-200 bg-white p-8">
-          <h3 className="mb-4 text-sm font-semibold text-gray-900">Accent Usage</h3>
+        <div className="mt-16 rounded-xl border border-[#222] bg-[#111] p-8">
+          <h3 className="mb-4 text-sm font-medium text-white">Accent Usage</h3>
           <div className="grid gap-6 sm:grid-cols-2">
             <div>
               <div className="mb-3 flex items-center gap-3">
                 <div className="h-8 w-8 rounded-lg bg-[#0070f3]" />
-                <span className="font-mono text-sm text-gray-600">#0070F3</span>
+                <span className="font-mono text-sm text-[#888]">#0070F3</span>
               </div>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-[#888]">
                 Light-mode accent. Used for links, buttons, and interactive
                 elements on light backgrounds.
               </p>
@@ -109,9 +109,9 @@ export default function ColorPalette() {
             <div>
               <div className="mb-3 flex items-center gap-3">
                 <div className="h-8 w-8 rounded-lg bg-[#00e5ff]" />
-                <span className="font-mono text-sm text-gray-600">#00E5FF</span>
+                <span className="font-mono text-sm text-[#888]">#00E5FF</span>
               </div>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-[#888]">
                 Dark-mode accent (cyan). Used for highlights and data
                 visualizations on dark backgrounds. Evokes neural activity.
               </p>

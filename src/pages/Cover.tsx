@@ -1,14 +1,12 @@
+import MirunsIcon from '../components/MirunsIcon'
+
 export default function Cover() {
   return (
     <section
       id="cover"
       className="brand-page flex min-h-screen flex-col items-center justify-center bg-black px-8 text-center"
     >
-      <img
-        src={`${import.meta.env.BASE_URL}miruns-icon-512.png`}
-        alt="Miruns logo"
-        className="mb-12 h-20 w-20 rounded-2xl"
-      />
+      <MirunsIcon size={80} className="mb-12" />
 
       <h1 className="font-sans text-5xl font-extralight tracking-tight text-white sm:text-8xl">
         miruns

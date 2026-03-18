@@ -1,3 +1,6 @@
+import MirunsIcon from '../components/MirunsIcon'
+import { MirunsIconAnimated } from '../components/MirunsIcon'
+
 function Icon({ children, label }: { children: React.ReactNode; label: string }) {
   return (
     <div className="flex flex-col items-center gap-3 rounded-lg border border-[#222] bg-[#111] p-6 text-center transition-colors hover:border-[#333]">
@@ -23,6 +26,52 @@ export default function Iconography() {
           Icons follow the Lucide style — 24×24 grid, 2px stroke, round caps
           and joins. Minimal, functional, recognizable at small sizes.
         </p>
+
+        {/* ── Brand Mark ─────────────────────────────────────── */}
+        <div className="mb-16">
+          <h3 className="mb-6 text-sm font-medium text-white">Brand Mark — M Signal</h3>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {/* Static */}
+            <div className="flex flex-col items-center justify-center rounded-xl border border-[#222] bg-[#111] p-10">
+              <MirunsIcon size={160} />
+              <p className="mt-6 text-xs text-[#666]">Static — SVG with gradient stroke</p>
+            </div>
+
+            {/* Animated */}
+            <div className="flex flex-col items-center justify-center rounded-xl border border-[#222] bg-[#111] p-10">
+              <MirunsIconAnimated size={160} />
+              <p className="mt-6 text-xs text-[#666]">Animated — signal flow cycle</p>
+            </div>
+          </div>
+
+          <div className="mt-6 grid gap-6 sm:grid-cols-3">
+            <div className="rounded-xl border border-[#222] bg-[#111] p-6">
+              <h4 className="mb-2 text-sm font-medium text-white">Concept</h4>
+              <p className="text-sm leading-relaxed text-[#888]">
+                The M-signal wave represents neural oscillation — an EEG readout
+                shaped into the letter "M". Flat, it reads as a signal; animated,
+                it orbits like a crown.
+              </p>
+            </div>
+            <div className="rounded-xl border border-[#222] bg-[#111] p-6">
+              <h4 className="mb-2 text-sm font-medium text-white">Animation</h4>
+              <p className="text-sm leading-relaxed text-[#888]">
+                An 8-second cycle: the static wave awakens, energy flows through
+                the stroke as dashes, accelerates to peak intensity with trailing
+                echoes and a spark, then decelerates and settles back to the
+                original solid SVG. Infinite loop.
+              </p>
+            </div>
+            <div className="rounded-xl border border-[#222] bg-[#111] p-6">
+              <h4 className="mb-2 text-sm font-medium text-white">Usage</h4>
+              <p className="text-sm leading-relaxed text-[#888]">
+                Use the static mark for print, favicons, and small contexts. The
+                animated version is reserved for hero sections, loading states,
+                and immersive product moments.
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* Icon grid */}
         <div className="mb-16 grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-6">

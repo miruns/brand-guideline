@@ -67,3 +67,30 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* ── Miruns Icon 3D Crown Animation ────────────────────────── */
+@keyframes crown-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(157, 80, 187, 0.6));
+  }
+}
+
+.miruns-icon-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.miruns-icon-orbit {
+  animation: crown-glow 3s ease-in-out infinite;
+}
+
+/* Paused state for a11y */
+@media (prefers-reduced-motion: reduce) {
+  .miruns-icon-orbit {
+    animation: none;
+  }
+}

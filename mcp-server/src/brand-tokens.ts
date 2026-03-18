@@ -89,6 +89,31 @@ export const brand = {
       weight: "font-light (300)",
       case: "lowercase always",
     },
+    brandMark: {
+      name: "M Signal",
+      description:
+        "A sinusoidal wave shaped into the letter M — representing EEG neural oscillation. The wave uses a cyan-to-violet gradient stroke.",
+      viewBox: "-5 -5 110 100",
+      path: "M 0 56 C 7 56, 10 10, 22 10 C 34 10, 42 72, 50 72 C 58 72, 66 10, 78 10 C 90 10, 93 56, 100 56",
+      stroke: {
+        type: "linearGradient",
+        from: "#00d2ff",
+        to: "#9d50bb",
+        width: 5,
+        lineCap: "round",
+        lineJoin: "round",
+      },
+      animation: {
+        name: "Crown Orbit",
+        description:
+          "Continuous Y-axis rotation (360°) with 15° X-tilt creates a faux-3D ribbon that orbits like a crown. Inspired by Meta's infinity loop.",
+        duration: "6s",
+        timingFunction: "linear",
+        glow: "Alternating cyan/violet drop-shadow glow, 3s ease-in-out cycle.",
+        usage:
+          "Hero sections, loading states, immersive product moments. Static version for print, favicons, small contexts.",
+      },
+    },
     assets: {
       icon: "miruns-icon.png",
       icon512: "miruns-icon-512.png",
